@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TipTime.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+     
+            <Label
+                Text="Valor: "             />
+            
+            <Entry 
+             x:Name="ValorGorjetaEntry"
+             Placeholder="Digite o valor da conta "
+              HeightRequest="50" />
+               
+            <Label
+                Text="Gorjeta: "/>
+            <Label
+                Text="00.00 "
+                x:Name="ValorGorjetaLabel"
+                />
+            
+            <Label
+                Text="Valor final: "
+             />
+            <Label
+                Text="0.00 "
+                x:Name="ValorFinalLabel"  
+                />
+            <Label
+                Text="Porcentagem da gorjeta: "
+                />
+            <Label
+                Text="15%: "
+                x:Name="PorcentagemGorjetaLabel"
+                />
+            <Slider Maximum="100" Minimum="0"
+                    x:Name="PorcentagemSlider"
+            ValueChanged="PorcentagemSlider_ValueChanged"
+                    />
+
+
+            <Button
+                x:Name="Gorjeta_15Btn"
+                Text="15%" 
+                Clicked="Gorjeta_15Btn_Clicked"
+                 />
+            <Button
+                 x:Name="Gorjeta_20Btn"
+                 Text="20%" 
+                 Clicked="Gorjeta_20Btn_Clicked"
+                />
+            <Button
+                 x:Name="Round_DownBtn"
+                 Text="Round Down" 
+                 Clicked="Round_DownBtn_Clicked"
+                 />
+            <Button
+                 x:Name="Round_UpBtn"
+                 Text="Round Up" 
+                 Clicked="Round_UpBtn_Clicked"
+               />    
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
